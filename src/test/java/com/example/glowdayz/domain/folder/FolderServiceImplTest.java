@@ -33,7 +33,7 @@ class FolderServiceImplTest {
 //
 //
 //
-        Assertions.assertEquals(false, result);
+        Assertions.assertEquals(true, result);
 //        Assertions.assertEquals(commend.getGrade(), info.getGrade());
     }
 }

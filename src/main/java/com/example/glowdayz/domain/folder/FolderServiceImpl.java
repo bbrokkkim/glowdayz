@@ -10,6 +10,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FolderServiceImpl implements FolderService  {
 
+    // 폴더가 이미 존재하면 false, 존재하지 않으면 true
     @Override
     public boolean createFolder(CreateFolderCommand commend) {
         Folder folder = Folder.builder()
@@ -19,18 +20,28 @@ public class FolderServiceImpl implements FolderService  {
         return folder.makeDir();
     }
 
+    // 폴더가 존재하지 않으면 false, 있으면 파일 만들고 true
     @Override
     public boolean saveImage(SaveImageCommand commend) {
-        return false;
+        Image image = Image.builder()
+                .folderName(commend.getFolderName())
+                .userId(commend.getUserId())
+                .imageList(commend.getUrlList())
+                .build();
+        return image.makeFiles();
     }
 
     @Override
     public List<FolderInfo> showFolderList(ShowFolderListCommand commend) {
-        return null;
+        return Folder.showDirList(commend.getUserId());
     }
 
     @Override
     public List<ImageInfo> showImageList(ShowImageListCommand commend) {
-        return null;
+        Image image = Image.builder()
+                .folderName(commend.getFolderName())
+                .userId(commend.getUserId())
+                .build();
+        return image.showImageList();
     }
 }

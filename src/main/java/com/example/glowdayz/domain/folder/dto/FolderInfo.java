@@ -11,5 +11,5 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FolderInfo {
     private final String name;
-    private final List<ImageInfo> images;
+    private final Integer imageSize;
 }

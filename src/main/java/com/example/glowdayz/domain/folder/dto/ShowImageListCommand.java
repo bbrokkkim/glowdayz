@@ -9,4 +9,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ShowImageListCommand {
     private final Long userId;
+    private final String folderName;
 }

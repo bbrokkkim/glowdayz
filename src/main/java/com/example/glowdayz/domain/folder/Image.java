@@ -18,7 +18,6 @@ import java.util.List;
 public class Image {
     private Long userId;
     private String folderName;
-    private List<String> imageList;
 
     private String setFilePath (String imageName) {
         return "resources/static/" + String.valueOf( userId )+"/"+ folderName+"/"+ imageName;
@@ -46,7 +45,7 @@ public class Image {
         return imageInfoList;
     }
 
-    public boolean makeFiles() {
+    public boolean makeFiles(List<String> imageList) {
         if (isExistedFolder()) {
             for (String image : imageList) {
                 File file = new File(setFilePath(image));

@@ -26,9 +26,8 @@ public class FolderServiceImpl implements FolderService  {
         Image image = Image.builder()
                 .folderName(commend.getFolderName())
                 .userId(commend.getUserId())
-                .imageList(commend.getUrlList())
                 .build();
-        return image.makeFiles();
+        return image.makeFiles(commend.getUrlList());
     }
 
     @Override

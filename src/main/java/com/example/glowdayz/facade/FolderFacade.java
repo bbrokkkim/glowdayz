@@ -1,8 +1,7 @@
 package com.example.glowdayz.facade;
 
-import com.example.glowdayz.domain.folder.FolderService;
-import com.example.glowdayz.domain.folder.Image;
-import com.example.glowdayz.domain.folder.dto.*;
+import com.example.glowdayz.domain.file.FolderService;
+import com.example.glowdayz.domain.file.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

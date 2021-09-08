@@ -1,4 +1,4 @@
-package com.example.glowdayz.interfaces.folder.dto;
+package com.example.glowdayz.domain.file.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -9,8 +9,9 @@ import java.util.List;
 @Builder
 @Getter
 @RequiredArgsConstructor
-public class SaveImageRequestDto {
+public class SaveImageCommand {
     private final List<String> urlList;
+    private final List<String> tagList;
     private final String folderName;
     private final Long userId;
 }

@@ -1,9 +1,9 @@
-package com.example.glowdayz.interfaces.folder;
+package com.example.glowdayz.interfaces.file;
 
-import com.example.glowdayz.domain.folder.dto.FolderInfo;
-import com.example.glowdayz.domain.folder.dto.ImageInfo;
+import com.example.glowdayz.domain.file.dto.FolderInfo;
+import com.example.glowdayz.domain.file.dto.ImageInfo;
 import com.example.glowdayz.facade.FolderFacade;
-import com.example.glowdayz.interfaces.folder.dto.*;
+import com.example.glowdayz.interfaces.file.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,9 +16,9 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/")
-public class FolderController {
+public class FileController {
     private final FolderFacade folderFacade;
-    FolderMapper mapper = FolderMapper.INSTANCE;
+    FileMapper mapper = FileMapper.INSTANCE;
 
     @PostMapping("folder")
     public boolean createFolder (CreateFolderRequestDto dto) {

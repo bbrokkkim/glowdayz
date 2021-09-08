@@ -1,11 +1,14 @@
-package com.example.glowdayz.domain.folder;
+package com.example.glowdayz.domain.file;
 
-import com.example.glowdayz.domain.folder.dto.ImageInfo;
+import com.example.glowdayz.domain.file.dto.ImageInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,7 +18,14 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Image {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private Integer tagSize;
+    private String tags;
+
     private Long userId;
     private String folderName;
 

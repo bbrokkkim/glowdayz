@@ -1,26 +1,22 @@
-package com.example.glowdayz.domain.folder;
+package com.example.glowdayz.domain.file;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 //import com.example.glowdayz.domain.folder.dto.*;
-import com.example.glowdayz.domain.folder.dto.*;
+import com.example.glowdayz.domain.file.dto.*;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class FolderServiceImplTest {
     @Autowired
-    FolderServiceImpl service;
+    FolderServiceImplForDB service;
 
     @Test
     @DisplayName("폴더 생성")

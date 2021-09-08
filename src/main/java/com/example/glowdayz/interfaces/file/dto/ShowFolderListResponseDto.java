@@ -1,4 +1,4 @@
-package com.example.glowdayz.interfaces.folder.dto;
+package com.example.glowdayz.interfaces.file.dto;
 
 import lombok.Builder;
 import lombok.Getter;

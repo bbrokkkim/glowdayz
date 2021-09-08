@@ -1,4 +1,4 @@
-package com.example.glowdayz.interfaces.folder.dto;
+package com.example.glowdayz.domain.file.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 @Builder
 @Getter
 @RequiredArgsConstructor
-public class ShowImageListRequestDto {
+public class CreateFolderCommand {
+    private final String title;
     private final Long userId;
-    private final String folderName;
 }

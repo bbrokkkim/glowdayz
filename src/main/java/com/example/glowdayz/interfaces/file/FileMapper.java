@@ -1,15 +1,15 @@
-package com.example.glowdayz.interfaces.folder;
+package com.example.glowdayz.interfaces.file;
 
-import com.example.glowdayz.domain.folder.dto.*;
-import com.example.glowdayz.interfaces.folder.dto.*;
+import com.example.glowdayz.domain.file.dto.*;
+import com.example.glowdayz.interfaces.file.dto.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Component;
 
 @Component
 @Mapper
-public interface FolderMapper {
-    FolderMapper INSTANCE = Mappers.getMapper( FolderMapper.class );
+public interface FileMapper {
+    FileMapper INSTANCE = Mappers.getMapper( FileMapper.class );
 
     CreateFolderCommand convertFrom(CreateFolderRequestDto dto);
     SaveImageCommand convertFrom(SaveImageRequestDto dto);

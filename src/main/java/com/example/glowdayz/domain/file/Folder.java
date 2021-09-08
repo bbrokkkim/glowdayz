@@ -1,6 +1,6 @@
-package com.example.glowdayz.domain.folder;
+package com.example.glowdayz.domain.file;
 
-import com.example.glowdayz.domain.folder.dto.FolderInfo;
+import com.example.glowdayz.domain.file.dto.FolderInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

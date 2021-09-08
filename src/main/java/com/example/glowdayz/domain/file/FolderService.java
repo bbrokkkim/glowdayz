@@ -1,6 +1,6 @@
-package com.example.glowdayz.domain.folder;
+package com.example.glowdayz.domain.file;
 
-import com.example.glowdayz.domain.folder.dto.*;
+import com.example.glowdayz.domain.file.dto.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

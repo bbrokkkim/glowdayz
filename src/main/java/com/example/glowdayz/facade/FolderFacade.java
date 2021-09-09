@@ -32,5 +32,8 @@ public class FolderFacade {
         return result;
     }
 
-
+    public List<ImageInfo> showImageListByTagSize(ShowImageListCommand commend) {
+        var result = folderService.showImageListByTagSize();
+        return result;
+    }
 }

@@ -41,4 +41,10 @@ public class FileController {
         List<ImageInfo> imageInfoList = folderFacade.showImageList(mapper.convertFrom(dto));
         return imageInfoList.stream().map(mapper::convertFrom).collect(Collectors.toList());
     }
+
+    @GetMapping("image/tag")
+    public List<ShowImageListResponseDto> showImageListByTagSize() {
+        List<ImageInfo> imageInfoList = folderFacade.showImageListByTagSize();
+        return imageInfoList.stream().map(mapper::convertFrom).collect(Collectors.toList());
+    }
 }

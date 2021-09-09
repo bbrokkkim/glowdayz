@@ -42,4 +42,9 @@ public class FolderServiceImpl implements FolderService  {
                 .build();
         return image.showImageList();
     }
+
+    @Override
+    public List<ImageInfo> showImageListByTagSize() {
+        return null;
+    }
 }

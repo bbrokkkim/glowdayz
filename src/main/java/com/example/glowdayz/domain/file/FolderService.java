@@ -11,4 +11,5 @@ public interface FolderService {
     boolean saveImage(SaveImageCommand commend);
     List<FolderInfo> showFolderList(ShowFolderListCommand commend);
     List<ImageInfo> showImageList(ShowImageListCommand commend);
+    List<ImageInfo> showImageListByTagSize();
 }

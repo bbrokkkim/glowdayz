@@ -55,14 +55,9 @@ public class FolderServiceImplForDB implements FolderService  {
         return image.showImageList();
     }
 
-//    @Override
-    public List<ImageInfo> showImageListByTagSize(ShowImageListCommand commend) {
-        Image image = Image.builder()
-                .folderName(commend.getFolderName())
-                .userId(commend.getUserId())
-                .build();
+    @Override
+    public List<ImageInfo> showImageListByTagSize() {
         List<Image> imageList = imageRepository.findTop10ByOrderByTagSizeDesc();
-
         return imageList.stream().map(mapper::convertFrom).collect(Collectors.toList());
     }
 

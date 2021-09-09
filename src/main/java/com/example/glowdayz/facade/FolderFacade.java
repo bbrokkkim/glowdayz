@@ -32,7 +32,7 @@ public class FolderFacade {
         return result;
     }
 
-    public List<ImageInfo> showImageListByTagSize(ShowImageListCommand commend) {
+    public List<ImageInfo> showImageListByTagSize() {
         var result = folderService.showImageListByTagSize();
         return result;
     }
